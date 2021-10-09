@@ -8,10 +8,6 @@ var hour = parseInt(timeNow.format("H"));
 console.log(hour);
 
 
-
-
-//$(".time-block").addClass("present");
-
 function colorTime() {
 $(".time-block").each(function () {
   var plannedTime = parseInt($(this).attr("id"));
@@ -28,6 +24,8 @@ $(".time-block").each(function () {
 }
  
 colorTime();
+// interval for the colour coding to be updated every 5mins, it doesn't require a page refresh 
+setInterval(colorTime, 300000);
     /*$(".saveBtn").click(function () {
         
         // val() method is used to get the values from 

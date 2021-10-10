@@ -1,3 +1,4 @@
+// variables for each time slot
 var plan9am = $("#9");
 var plan10am = $("#10");
 var plan11am = $("#11");
@@ -13,12 +14,13 @@ var plan5pm = $("#17");
 var today = moment();
 $("#currentDay").text(today.format("dddd, Do MMMM"));
 
+// time calculation to be used in colouring the time slots
 var timeNow = moment();
 console.log(timeNow);
 var hour = parseInt(timeNow.format("H"));
 console.log(hour);
 
-
+// function to display colour in the time slot
 function colorTime() {
   $(".time-block").each(function () {
     var plannedTime = parseInt($(this).attr("id"));
@@ -48,4 +50,23 @@ $(".saveBtn").click(function () {
   localStorage.setItem("5pm", (plan5pm.val()))
 
 })
+
+
+// get entries from local storage and display, so entries remain after refresh or closing tab
+$("#9").append(localStorage.getItem("9am"));
+$("#10").append(localStorage.getItem("10am"));
+$("#11").append(localStorage.getItem("11am"));
+$("#12").append(localStorage.getItem("12pm"));
+$("#13").append(localStorage.getItem("1pm"));
+$("#14").append(localStorage.getItem("2pm"));
+$("#15").append(localStorage.getItem("3pm"));
+$("#16").append(localStorage.getItem("4pm"));
+$("#17").append(localStorage.getItem("5pm"));
+
+
+$("#clear").click(function () {
+  $(".activity").val("");
+  localStorage.clear();
+}
+)
 

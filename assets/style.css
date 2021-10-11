@@ -1,16 +1,18 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-size: 16px;
     line-height: 1;
+    background-color: rgb(124, 150, 158);
   }
   
   textarea {
-    background: transparent;
+    
     border: solid;
     border-color: black;
     resize: none;
     color: #000000;
-    border-left: 1px solid black;
+    border: 1px solid black;
+  
     padding: 10px;
   }
   
@@ -28,7 +30,7 @@ body {
   
   .time-block {
     text-align: center;
-    border-radius: 15px;
+   
   }
   
   .row {
@@ -45,7 +47,7 @@ body {
   }
   
   .past {
-    background-color: #d3d3d3;
+    background-color: #888888;
     color: black;
   }
   
@@ -59,6 +61,12 @@ body {
     color: white;
   }
   
+  .planned-time {
+    border: 1px solid black;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    text-align: center;
+  }
   .saveBtn {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
@@ -72,7 +80,16 @@ body {
     transition: all 0.3s ease-in-out;
   }
 
-  #clear {
-    display: flex;
-    justify-content: center;
+  footer {
+    margin-top: 50px;
+    margin-bottom: 5px;
+    
   }
+  #clear {
+  
+    border-radius: 8px;
+    padding: 5px;
+    background-color: #06aed5;
+    color: black;
+  }
+
